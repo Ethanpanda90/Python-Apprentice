@@ -10,4 +10,25 @@ Hint: See 08a_More Turtle Programs, section 'Change the Background Image' and
 'Change the Turtle Shape'
 """
 
-... # Your code here
+import turtle as turtle
+
+screen = turtle.Screen()
+screen.setup(width=600, height=600)
+screen.bgcolor('white')
+
+t = turtle.Turtle()
+
+def set_turtle_image(turtle, image_name):
+    """Set the turtle's shape to a custom image."""
+
+    from pathlib import Path
+    image_dir = Path(__file__).parent.parent / "images"
+    image_path = str(image_dir / image_name)
+
+    screen = turtle.getscreen()
+    screen.addshape(image_path)
+    turtle.shape(image_path)
+
+set_turtle_image(t.'moustache.png')
+
+turtle.exitonclick() 
