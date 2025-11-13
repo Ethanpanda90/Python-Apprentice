@@ -29,6 +29,6 @@ def set_turtle_image(turtle, image_name):
     screen.addshape(image_path)
     turtle.shape(image_path)
 
-set_turtle_image(t.'moustache.png')
+set_turtle_image(t.'moustache3.gif')
 
 turtle.exitonclick() 
