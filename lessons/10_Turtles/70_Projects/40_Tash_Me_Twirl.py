@@ -44,9 +44,13 @@ set_background_image(screen, 'emoji2.png')
 t.goto(0,-100)
 set_turtle_image(t,'moustache3.gif')
 
-def screen_clicked():
-    for i in range(4):
-    t.right(90)
+def screen_clicked(x, y):
+    """Print the x and y coordinates of the screen when clicked.
+    and make the turtle move to the clicked location."""
+
+    print('You pressed: x=' + str(x) + ', y=' + str(y))
+
+    t.goto(x, y)
 
 screen.onclick(screen_clicked)
 
