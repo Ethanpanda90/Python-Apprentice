@@ -50,7 +50,10 @@ def screen_clicked(x, y):
 
     print('You pressed: x=' + str(x) + ', y=' + str(y))
 
-    t.forward(10)
+    for i in range(35):
+        t.forward(10)
+        t.left(10)
+    t.goto(0,-100)
 
 screen.onclick(screen_clicked)
 
