@@ -22,7 +22,7 @@ def getNextColor(i):
 
 turtle.setup(600,600,0,0)               # Set the size of the window
 window = turtle.Screen()
-
+window.bgcolor('Black')
 
 t = turtle.Turtle() 
 
@@ -44,7 +44,7 @@ def make_a_hexagon(t):
 def make_a_circle(t):
     for i in range(360):
         t.pencolor('Black')
-        t.forward(60)
+        t.forward(1)
         t.left(1)
 
 # 2) Call make_a_shape() in a loop to make the turtle draw a spiral.
@@ -66,9 +66,14 @@ for i in range(36):
     t.right(360/num_shapes)
     t.end_fill()
 
-for i in range(120):
-    turtle.fillcolor('Black')
+num_shapes = 8
+
+for i in range(8):
+    t.fillcolor('Black')
+    t.begin_fill()
     make_a_circle(t)
+    t.right(360/num_shapes)
+    t.end_fill()
 
 turtle.hideturtle()
 turtle.done()
