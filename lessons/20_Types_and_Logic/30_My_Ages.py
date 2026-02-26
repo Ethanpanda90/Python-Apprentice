@@ -39,6 +39,7 @@ age =  simpledialog.askfloat("Your Age", "How old are you?")
 simpledialog.askinteger("How old are you?")
 # Use if statements to determine the age group
 # and create a message
+messagebox.showinfo()
 
 if age == 2
     messagebox.showinfo("skibidi")
