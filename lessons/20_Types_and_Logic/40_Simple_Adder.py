@@ -7,9 +7,10 @@ at the comments and the code snippets in the previous lessons, like
 03_My_Ages.py, to figure out how to complete the program.
 """
 
-# Import the required modules
+from tkinter import messagebox, simpledialog, Tk
 
-# Create a window object
+window = Tk()    
+window.withdraw()
 
 # Hide the window, hint: use the withdraw method
 
