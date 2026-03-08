@@ -12,12 +12,12 @@ from tkinter import messagebox, simpledialog, Tk
 window = Tk()    
 window.withdraw()
 
-# Hide the window, hint: use the withdraw method
+integer1 = simpledialog.askinteger("Simple Adder", "Please type in a number.")
 
-# Ask the user for the first number   
+integer2 = simpledialog.askinteger("Simple Adder", "Please type another number.")
 
-# Ask the user for the second number
+sum = int(integer1) + int(integer2)
 
-# Display the sum of the two numbers 
+shownsum = messagebox.showinfo("The sum of those two numbers are...", sum)
 
-# Keep the window open
+window.mainloop()
