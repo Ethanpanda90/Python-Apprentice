@@ -20,20 +20,33 @@ simpledialog.askfloat() or simpledialog.askinteger(), and for the math operation
 you can ask for a string with simpledialog.askstring().
 """
 
-# Import the required modules
+from tkinter import messagebox, simpledialog, Tk
 
-# Create a window object
+window = Tk()    
+window.withdraw()
 
-# Hide the window, hint: use the withdraw method
+a = simpledialog.askinteger("Infuriating Calculator", "Please type in a number.")
 
-# Ask the user for the first number   
+b = simpledialog.askinteger("Infuriating Calculator", "Please type another number.")
 
-# Ask the user for the second number
+operation = simpledialog.askstring("Infuriating Calculator", "Please type in an operation.")
 
-# Ask the user for the math operation
+if operation = "+":
+   calculated = a + b
+   messagebox.showinfo("Infuriating Calculator", f"Calculation: {calculated}")
+else:
+   if operation = "-":
+      calculated = a - b
+      messagebox.showinfo("Infuriating Calculator", f"Calculation: {calculated}")
+   else:
+      if operation = "*":
+         calculated = a * b
+         messagebox.showinfo("Infuriating Calculator", f"Calculation: {calculated}")
+      else:
+         if operation = "/":
+            calculated = a / b
+            messagebox.showinfo("Infuriating Calculator", f"Calculation: {calculated}")
 
-# Use if-elif-else statements to provide the desired math operation on the numbers and display the result.
 
-# If the user enters an unknown operation, display an error message. ( use messagebox.showerror()
 
-# Keep the window open
+window.mainloop()

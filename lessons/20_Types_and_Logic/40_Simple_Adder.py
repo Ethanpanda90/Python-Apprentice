@@ -12,12 +12,12 @@ from tkinter import messagebox, simpledialog, Tk
 window = Tk()    
 window.withdraw()
 
-integer1 = simpledialog.askinteger("Simple Adder", "Please type in a number.")
+a = simpledialog.askinteger("Simple Adder", "Please type in a number.")
 
-integer2 = simpledialog.askinteger("Simple Adder", "Please type another number.")
+b = simpledialog.askinteger("Simple Adder", "Please type another number.")
 
-sum = int(integer1) + int(integer2)
+sum = a + b
 
-shownsum = messagebox.showinfo("The sum of those two numbers are...", sum)
+messagebox.showinfo("Simple Adder", f"The sum of those two numbers are: {sum}")
 
 window.mainloop()
