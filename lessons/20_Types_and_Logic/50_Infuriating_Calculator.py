@@ -31,22 +31,18 @@ b = simpledialog.askinteger("Infuriating Calculator", "Please type another numbe
 
 operation = simpledialog.askstring("Infuriating Calculator", "Please type in an operation.")
 
-if operation = "+":
+if operation = '+':
    calculated = a + b
-   messagebox.showinfo("Infuriating Calculator", f"Calculation: {calculated}")
 else:
-   if operation = "-":
+   if operation = '-':
       calculated = a - b
-      messagebox.showinfo("Infuriating Calculator", f"Calculation: {calculated}")
    else:
-      if operation = "*":
+      if operation = '*':
          calculated = a * b
-         messagebox.showinfo("Infuriating Calculator", f"Calculation: {calculated}")
       else:
-         if operation = "/":
+         if operation = '/':
             calculated = a / b
-            messagebox.showinfo("Infuriating Calculator", f"Calculation: {calculated}")
 
-
+messagebox.showinfo("Infuriating Calculator", f'{calculated}')
 
 window.mainloop()
