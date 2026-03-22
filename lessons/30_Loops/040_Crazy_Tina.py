@@ -26,7 +26,7 @@ for  i in range(8):
 
     forward = forwards[2]
     left = lefts[2]
-    color = colors[1]
+    color = colors[0]
 
     tina.color(color)
     tina.forward(forward)
