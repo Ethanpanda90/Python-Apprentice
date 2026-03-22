@@ -47,7 +47,7 @@ else:
         messagebox.showinfo('What you are...', "Oh my brainrot, you're a toddler.")
     else:
         if age < 12:
-            messagebox.showinfo('What you are...', "Finnaly, your growing up you child. Took you long enough.")
+            messagebox.showinfo('What you are...', "Finaly, your growing up you child. Took you long enough.")
         else:
             if age == 12:
                 messagebox.showinfo('What you are...', "You're pretty awesome to be 12!")
@@ -61,7 +61,7 @@ else:
                         if age == 67:
                             messagebox.showinfo('What you are...', "SHUT UP ABOUT 67 I'M TIRED OF SEEING IT.")
                         else:
-                            if age <= 65:
+                            if age >= 65:
                                 messagebox.showinfo('What you are...', "You are a senior, therefore, you should be respected.")
 
 
