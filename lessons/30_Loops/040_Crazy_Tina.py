@@ -10,23 +10,25 @@ Review the ' Using Lists' section of the previous lesson if you need
 more help
 """
 
+import random
 import turtle                           # Tell Python we want to work with the turtle
 turtle.setup(600,600,0,0)               # Set the size of the window
 
 tina = turtle.Turtle()                  # Create a turtle named tina
 
 tina.shape('turtle')                    # Set the shape of the turtle to a turtle
-tina.speed(2)                           # Make the turtle move as fast, but not too fast. 
+tina.speed(1)                           # Make the turtle move as fast, but not too fast. 
 
-forwards = [ 1, 3, 8]
-lefts = [ 1, 21, 67 ]
-colors = [  'blue', 'red', 'green', 'yellow']
+forwards = [ 10, -2, 30, -4, 50, -6 ]
+lefts = [ -10, 2, -30, 4, -50, 6 ]
+colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
 
-for  i in range(8):
+for  i in range(100):
 
-    forward = forwards[2]
-    left = lefts[2]
-    color = colors[0]
+    random_number = random.randint(0, 5)
+    forward = forwards[random_number]
+    left = lefts[random_number]
+    color = colors[random_number]
 
     tina.color(color)
     tina.forward(forward)
