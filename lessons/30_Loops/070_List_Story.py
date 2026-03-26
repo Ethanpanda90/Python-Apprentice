@@ -6,14 +6,13 @@ append them to the story
 """
 
 
-words = ['Once', '👦', 'upon', '🐕', 'park', 'met', 'with', 'a', 'the', 
-    'time', 'to', 'who', '🐈', '👧', 'and', 'went', 'had', 'play', '⚽.', 'they']
+words = ['Once', '👦', 'upon', '🐕', 'park', 'met', 'with', 'a', 'the', 'time', 'to', 'who', '🐈', '👧', 'and', 'went', 'had', 'play', '⚽.', 'they']
 
 
 
 # Create a story using the words in the list
 
-print('hi,' words)
+print(words[1])
 
 
 
