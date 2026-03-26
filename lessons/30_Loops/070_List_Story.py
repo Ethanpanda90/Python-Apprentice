@@ -12,10 +12,8 @@ words = ['Once', '👦', 'upon', '🐕', 'park', 'met', 'with', 'a', 'the', 'tim
 
 # Create a story using the words in the list
 
-print(words[1])
+story = words[0], words[2]
 
 
 
-"""# Display the story to the user
-print('Story'.join(story))
-"""
+print(story)
