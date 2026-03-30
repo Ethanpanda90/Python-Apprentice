@@ -15,7 +15,7 @@ Your job is to modify only one line -- the one with range()
 Your program should print 4 badgers. 
 """
 
-for i in range(1, 31): # Change only this line
+for i in [i for i in range(5, 30, 5) if i != 15]: # Change only this line
 
     # Don't change anything below this line
     if i % 15 == 0:
