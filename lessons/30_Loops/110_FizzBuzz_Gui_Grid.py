@@ -30,19 +30,19 @@ or you can convert the number to a string and iterate over the digits
 
 from guizero import App, Box, Text
 
-app = App("Numbers Grid", layout="grid", width=10, height=10)
-
+app = App("Numbers Grid", layout="grid", width=100, height=100)
+text = Text(app, text="skibidi")
 # Create a 10x10 grid using nested loops
 # Or you can use a single loop and calculate the row and column
+"""
 for i in range(1, 101):
     print(f"{i:3}", end=" ")
     if i % 10 == 0:
         print()
 # In the loop, calculate or increment the number
 
-for i in [i for i in range(5, 30, 5) if i != 15]: # Change only this line
+for i in range(1,31):
 
- # Don't change anything below this line
     if i % 15 == 0:
         print(i, '🐍 snake!')
     elif i % 5 == 0:
@@ -51,9 +51,7 @@ for i in [i for i in range(5, 30, 5) if i != 15]: # Change only this line
         print(i, '🍄 mushroom')
     else:
         print(i)
-
+"""
 # If you are displaying a number, calculate the sum of the digits and determine the color
 
 # Call Text(app, text='...', grid=[col, row], color=...) to display something. 
-
-app.display()
