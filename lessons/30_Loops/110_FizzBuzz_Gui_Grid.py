@@ -30,7 +30,7 @@ or you can convert the number to a string and iterate over the digits
 
 from guizero import App, Box, Text
 
-app = App("Numbers Grid", layout="grid")
+app = App("Numbers Grid", layout="grid", width=10, height=10)
 
 # Create a 10x10 grid using nested loops
 # Or you can use a single loop and calculate the row and column
