@@ -30,17 +30,19 @@ or you can convert the number to a string and iterate over the digits
 
 from guizero import App, Box, Text
 
-app = App("Numbers Grid", layout="grid", width=100, height=100)
-text = Text(app, text="skibidi")
-# Create a 10x10 grid using nested loops
-# Or you can use a single loop and calculate the row and column
-"""
+app = App("Numbers 'Grid", layout="grid", width=100, height=100)
 for i in range(1, 101):
     print(f"{i:3}", end=" ")
     if i % 10 == 0:
         print()
-# In the loop, calculate or increment the number
+Text(app, text=str(1), grid=[1, 1], color="red")
+# Create a 10x10 grid using nested loops
+# Or you can use a single loop and calculate the row and column
 
+
+# In the loop, calculate or increment the number
+app.display()
+"""
 for i in range(1,31):
 
     if i % 15 == 0:
