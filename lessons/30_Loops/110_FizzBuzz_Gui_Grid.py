@@ -30,19 +30,34 @@ or you can convert the number to a string and iterate over the digits
 
 from guizero import App, Box, Text
 
-app = App("Numbers 'Grid", layout="grid", width=100, height=100)
-for i in range(1, 101):
-    print(f"{i:3}", end=" ")
-    if i % 10 == 0:
-        print()
-Text(app, text=str(1), grid=[1, 1], color="red")
+app = App("Numbers Grid", layout="grid", width=333, height=333)
+
+numberthing = 0
+for i in range(10):
+    for j in range(10):
+        numberthing += 1
+        if numberthing % 2 == 0:
+            oddoreven = 'blue'
+        else:
+            oddoreven = 'red'
+        Text(app, text=str(numberthing), grid=[j, i], color=str(oddoreven))
 # Create a 10x10 grid using nested loops
 # Or you can use a single loop and calculate the row and column
-
+app2 = App("Numbers Grid", layout="grid", width=333, height=333)
+numberthing2 = 0
+for i2 in range(10):
+    for j2 in range(10):
+        numberthing2 += 1
+        if numberthing2 % 15 == 0:
+            Text(app2, text='🐍', grid=[j2, i2], color='black')
+        elif numberthing2 % 5 == 0:
+            Text(app2, text='🦡', grid=[j2, i2], color='black')
+        elif numberthing2 % 3 == 0:
+            Text(app2, text='🍄', grid=[j2, i2], color='black')
+        else:
+            Text(app2, text=str(numberthing2), grid=[j2, i2], color='black')
 
 # In the loop, calculate or increment the number
-app.display()
-"""
 for i in range(1,31):
 
     if i % 15 == 0:
@@ -53,7 +68,10 @@ for i in range(1,31):
         print(i, '🍄 mushroom')
     else:
         print(i)
-"""
+app.display()
+
+
+
 # If you are displaying a number, calculate the sum of the digits and determine the color
 
 # Call Text(app, text='...', grid=[col, row], color=...) to display something. 
