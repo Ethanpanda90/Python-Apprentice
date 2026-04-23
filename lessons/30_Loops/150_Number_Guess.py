@@ -28,7 +28,6 @@ Use the ask_integer function to get the user's guess, like this:
 
 Note: The prompts and output for your program will be in the teminal
 at the bottom of the editor screen; this program does not use the GUI.
-'FREAKYOUMEAN GUI'
 """
 
 import random
