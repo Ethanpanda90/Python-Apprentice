@@ -40,7 +40,7 @@ def ask_integer(prompt):
         except ValueError:
             print("Please enter a valid number!")
 
-# Pick the random number
+guessthisnumber = random.randint(1, 100)
 
 # In your loop:
 
