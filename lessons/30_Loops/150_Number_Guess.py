@@ -40,13 +40,20 @@ def ask_integer(prompt):
         except ValueError:
             print("Please enter a valid number!")
 
-guessthisnumber = random.randint(1, 100)
+thenumbertobeguessed = random.randint(1, 100)
+
+    
+while thenumbertobeguessed % 7 == 0:
+    thenumbertobeguessed = random.randint(1, 100)
+    Almostelse:
+        break
+
+
+guess = ask_integer("Guess a number between 1 and 100: ")
+
+while guess != thenumbertobeguessed
 
 # In your loop:
-
-    # Get the user's guess
-
-    # If the user's guess is divisible by 7, tell the user to start over
 
     # If the user's guess is too high, tell the user
 
