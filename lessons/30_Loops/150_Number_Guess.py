@@ -45,7 +45,7 @@ thenumbertobeguessed = random.randint(1, 100)
     
 while thenumbertobeguessed % 7 == 0:
     thenumbertobeguessed = random.randint(1, 100)
-    Almostelse:
+    else:
         break
 
 
