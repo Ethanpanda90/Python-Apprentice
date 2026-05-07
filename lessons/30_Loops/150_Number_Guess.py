@@ -45,18 +45,21 @@ thenumbertobeguessed = random.randint(1, 100)
     
 while thenumbertobeguessed % 7 == 0:
     thenumbertobeguessed = random.randint(1, 100)
-    else:
-        break
 
 
 guess = ask_integer("Guess a number between 1 and 100: ")
 
-while guess != thenumbertobeguessed
+while guess != thenumbertobeguessed:
 
 # In your loop:
 
-    # If the user's guess is too high, tell the user
-
-    # If the user's guess is too low, tell the user
-    
+    if guess > thenumbertobeguessed:
+        guess = ask_integer("That number is too high! Try again.")
+    else:
+        if guess < thenumbertobeguessed:
+            guess = ask_integer("That number is too low! Try again.")
+        else:
+            if guess == thenumbertobeguessed:
+                break
+print("YES YOU DID IT!")
     # If the user's guess is correct, tell the user and break out of the loop
