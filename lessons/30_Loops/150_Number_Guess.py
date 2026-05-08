@@ -41,7 +41,7 @@ def ask_integer(prompt):
             print("Please enter a valid number!")
 
 thenumbertobeguessed = random.randint(1, 100)
-
+timesguessed = 0
     
 while thenumbertobeguessed % 7 == 0:
     thenumbertobeguessed = random.randint(1, 100)
@@ -51,15 +51,15 @@ guess = ask_integer("Guess a number between 1 and 100: ")
 
 while guess != thenumbertobeguessed:
 
-# In your loop:
-
     if guess > thenumbertobeguessed:
         guess = ask_integer("That number is too high! Try again.")
+        timesguessed += 1
     else:
         if guess < thenumbertobeguessed:
             guess = ask_integer("That number is too low! Try again.")
+            timesguessed += 1
         else:
             if guess == thenumbertobeguessed:
                 break
-print("YES YOU DID IT!")
+print(f"Congratulations! You guessed the number in {timesguessed} tries!")
     # If the user's guess is correct, tell the user and break out of the loop
