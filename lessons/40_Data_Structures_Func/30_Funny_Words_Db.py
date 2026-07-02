@@ -23,6 +23,7 @@ an error message will be displayed and new definitions will not be added.
 # Implement the functions below
 
 def add_definition(db, key, value):
+    
     """
     Add a new definition to the database.
 
@@ -38,9 +39,12 @@ def add_definition(db, key, value):
     """
 
     # Check the limit
-
+    if len(db) == 5:
+        KeyError
+    else:
     # Set the item in the database
-
+        db.add(value)
+        
     pass
 
 
@@ -57,8 +61,10 @@ def delete_definition(db, key):
     """
 
     # Delete the item from db if it is present
-
-    pass
+    if key in db:
+        db.remove(key)
+    else:
+        pass
 
 
 def is_funny(definition):
