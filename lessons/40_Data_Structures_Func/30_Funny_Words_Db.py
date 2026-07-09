@@ -45,7 +45,7 @@ def add_definition(db, key, value):
     # Set the item in the database
         db.add(value)
         
-    pass
+    
 
 
 def delete_definition(db, key):
@@ -69,7 +69,7 @@ def delete_definition(db, key):
 
 def is_funny(definition):
     """
-    Check if the definition is funny, which means it contains one of the words:
+    Check if the dewfinition is funny, which means it contains one of the words:
 
         'fun', 'funny', 'hilarious', 'amusing', 'pants', 'spleen'
 
@@ -81,6 +81,7 @@ def is_funny(definition):
     """
     
     # Return True if the definition contains any of the funny words, False otherwise
+    
 
     return False
 
