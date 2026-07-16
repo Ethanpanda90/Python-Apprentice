@@ -39,11 +39,11 @@ def add_definition(db, key, value):
     """
 
     # Check the limit
-    if len(db) == 5:
-        KeyError
-    else:
+    if len(db) >= 5:
+        error("LOL", "Imagine not being able to store more than 5 definitions!")
+    
     # Set the item in the database
-        db.add(value)
+        db[key] = value
     
 
 
@@ -61,14 +61,13 @@ def delete_definition(db, key):
 
     # Delete the item from db if it is present
     if key in db:
-        db.remove(key)
-    else:
-        pass
+        del db[key]
+
 
 
 def is_funny(definition):
     """
-    Check if the dewfinition is funny, which means it contains one of the words:
+    Check if the definition is funny, which means it contains one of the words:
 
         'fun', 'funny', 'hilarious', 'amusing', 'pants', 'spleen'
 
@@ -82,7 +81,7 @@ def is_funny(definition):
     # Return True if the definition contains any of the funny words, False otherwise
     
 
-    return False
+    pass
 
 def update_listbox(db):
     """
@@ -99,6 +98,8 @@ def update_listbox(db):
         "Item 2: Fake Definition 2",
         "Item 3: fake Definition 3"
     ]
+
+    l = db
 
     # Add each definition to a string
     # iterate over the dict's key-value pairs and turn them into
