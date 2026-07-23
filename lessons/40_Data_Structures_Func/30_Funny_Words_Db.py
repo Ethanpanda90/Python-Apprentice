@@ -40,10 +40,12 @@ def add_definition(db, key, value):
 
     # Check the limit
     if len(db) >= 5:
-        error("LOL", "Imagine not being able to store more than 5 definitions!")
+        error("Limit Reached", "You cannot store more than 5 definitions.")
     
     # Set the item in the database
+    else:
         db[key] = value
+        _update_listbox(db)
     
 
 
@@ -62,6 +64,7 @@ def delete_definition(db, key):
     # Delete the item from db if it is present
     if key in db:
         del db[key]
+        update_listbox
 
 
 
@@ -99,11 +102,14 @@ def update_listbox(db):
         "Item 3: fake Definition 3"
     ]
 
-    l = db
+
 
     # Add each definition to a string
     # iterate over the dict's key-value pairs and turn them into
     # strings, then add the strings to the list with .append()
+
+    for key, value in db.items():
+        l.append(f"{key}: {value}")
 
     return l
 
