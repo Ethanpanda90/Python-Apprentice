@@ -45,7 +45,7 @@ def add_definition(db, key, value):
     # Set the item in the database
     else:
         db[key] = value
-        update_listbox(db)
+        _update_listbox
     
 
 
@@ -64,7 +64,7 @@ def delete_definition(db, key):
     # Delete the item from db if it is present
     if key in db:
         del db[key]
-        update_listbox
+        _update_listbox
 
 
 
@@ -80,15 +80,18 @@ def is_funny(definition):
     Returns:
         bool: True if the definition contains any of the funny words, False otherwise.
     """
-    
+    pass
     # Return True if the definition contains any of the funny words, False otherwise
+    """
     funnywords = ('fun', 'funny', 'hilarious', 'amusing', 'pants', 'spleen')
+    
+
     for words in funnywords:
         if funnywords[words] in definition:
             return True
         else:
             return False
-
+    """
     
 
 def update_listbox(db):
