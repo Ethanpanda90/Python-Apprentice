@@ -79,7 +79,7 @@ def is_funny(definition):
 
     Returns:
         bool: True if the definition contains any of the funny words, False otherwise.
-    """
+    ""
     pass
     # Return True if the definition contains any of the funny words, False otherwise
     """
