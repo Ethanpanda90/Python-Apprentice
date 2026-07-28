@@ -74,25 +74,22 @@ def is_funny(definition):
 
         'fun', 'funny', 'hilarious', 'amusing', 'pants', 'spleen'
 
-    Args:
+    Args:t
         definition (str): The definition to check.
 
     Returns:
         bool: True if the definition contains any of the funny words, False otherwise.
-    ""
-    pass
-    # Return True if the definition contains any of the funny words, False otherwise
     """
-    funnywords = ('fun', 'funny', 'hilarious', 'amusing', 'pants', 'spleen')
     
+    # Return True if the definition contains any of the funny words, False otherwise
+    
+    funnywords = ('fun', 'funny', 'hilarious', 'amusing', 'pants', 'spleen')
 
-    for words in funnywords:
-        if funnywords[words] in definition:
+    for i in range in 5:
+        if funnywords[i] in definition:
             return True
         else:
             return False
-    """
-    
 
 def update_listbox(db):
     """
@@ -105,9 +102,7 @@ def update_listbox(db):
     # This function will return a list of definitions to be displayed in the listbox, like
     # the one below. (For your function, you should set this list to the empty list)
     l = [
-        "Item 1: Fake Definition 1",
-        "Item 2: Fake Definition 2",
-        "Item 3: fake Definition 3"
+        
     ]
 
 
