@@ -40,7 +40,7 @@ def add_definition(db, key, value):
 
     # Check the limit
     if len(db) >= 5:
-        error("Limit Reached", "You cannot store more than 5 definitions.")
+        error("Limit Reached", "You cannot store more than 5 words.")
     
     # Set the item in the database
     else:
