@@ -83,14 +83,15 @@ def is_funny(definition):
     
     # Return True if the definition contains any of the funny words, False otherwise
     
+    
     funnywords = ('fun', 'funny', 'hilarious', 'amusing', 'pants', 'spleen')
-
-    for i in range in 5:
-        if funnywords[i] in definition:
+    
+    for word in funnywords:
+        if word in definition:
             return True
-        else:
-            return False
 
+    return False
+    
 def update_listbox(db):
     """
     Update the listbox with the current definitions in the database.
@@ -113,7 +114,6 @@ def update_listbox(db):
 
     for key, value in db.items():
         l.append(f"{key}: {value}")
-    _update_listbox
     return l
     
 
