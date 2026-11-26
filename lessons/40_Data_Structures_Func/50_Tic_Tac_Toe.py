@@ -15,8 +15,12 @@ def check_row(l):
     Returns:
         The winner's token ( x or o ) if there is one, otherwise None
         """
-
-    return None
+    if set(l) == {X_MARK}:
+        return X_MARK
+    elif set(l) == {O_MARK}:
+        return O_MARK
+    else:
+        return None
 
 def check_win(board):
     """Check if a player has won on a board
@@ -26,6 +30,60 @@ def check_win(board):
     Returns:
         The winner's token ( x or o ) if there is one, otherwise None
     """
+    LtRdiagonal = []
+
+    for i in range(3):
+        diagonal_check = board[i]
+        LtRdiagonal.append(diagonal_check[i])
+
+    winner = check_row(LtRdiagonal)
+    if winner is not None:
+        return winner
+
+    RtLdiagonal = []
+
+    for i in range(3):
+        diagonal_check = board[i]
+        RtLdiagonal.append(diagonal_check[2-i])
+
+    winner = check_row(RtLdiagonal)
+    if winner is not None:
+        return winner
+
+    ColChecking = []
+
+    for i in range(3):
+        Col1Check = board[i]
+        ColChecking.append(Col1Check[0])
+
+    winner = check_row(ColChecking)
+    if winner is not None:
+        return winner
+
+    ColChecking = []
+
+    for i in range(3):
+        Col2Check = board[i]
+        ColChecking.append(Col2Check[1])
+
+    winner = check_row(ColChecking)
+    if winner is not None:
+        return winner
+
+    ColChecking = []
+
+    for i in range(3):
+        Col3Check = board[i]
+        ColChecking.append(Col3Check[2])
+
+    winner = check_row(ColChecking)
+    if winner is not None:
+        return winner
+
+    for i in range(3):
+        winner = check_row(board[i])
+        if winner is not None:
+            return winner
 
     return None
 
